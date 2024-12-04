@@ -1,0 +1,154 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.main-banner {
+    display: flex;
+    align-items: center; /* Centre verticalement l'image et le titre */
+    justify-content: flex-start; /* Aligne l'image et le titre à gauche */
+    background-image: url('../images/terrain.jpg'); /* Mettez le chemin de votre image */
+    background-size: cover; /* Couvre toute la bannière */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    padding: 40px; /* Ajustez les marges internes */
+    position: relative;
+    font-size: 2rem;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap; /* Empêche le texte de se briser en plusieurs lignes */
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est trop long */
+}
+
+.main-banner a {
+    display: inline-block; /* Garantit que l'image est traitée comme un élément en ligne-bloc */
+    vertical-align: middle; /* Centre verticalement l'image avec le texte environnant */
+    text-decoration: none; /* Enlève le soulignement si nécessaire */
+}
+
+/* Style pour l'image dans la bannière */
+.banner-logo {
+    position: relative; /* Relatif pour ne pas sortir du conteneur */
+    height: auto;
+    max-height: 100px; /* Limite la taille de l'image */
+    object-fit: contain;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+/* Style du titre */
+.title {
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left; /* Aligne le texte à gauche */
+    margin-left: 20px; /* Ajoute un petit espace entre l'image et le titre */
+    z-index: 1;
+    white-space: nowrap; /* Empêche que le texte se brise en plusieurs lignes */
+}
+
+/* Style du sous-bandeau */
+.sub-banner {
+    background-color: #202442;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 15px; /* Espacement entre les boutons */
+}
+
+/* Style des boutons */
+.dropdown-button {
+    background-color: #3A3F5A;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour la couleur de fond et l'agrandissement */
+    transform-origin: center; /* L'agrandissement se fait depuis le centre */
+}
+
+.dropdown-button:hover {
+    background-color: #50567A;
+    transform: scale(1.1); /* Agrandit légèrement le bouton sans changer son positionnement */
+}
+
+/* Conteneur du menu déroulant */
+.dropdown {
+    position: relative; /* Permet de positionner le menu déroulant à l'intérieur de chaque bouton */
+}
+
+/* Menus déroulants */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Place le menu juste en dessous du bouton */
+    left: 50%; /* Centre le menu sous le bouton */
+    transform: translateX(-50%);
+    width: auto; /* La largeur s'ajuste automatiquement au contenu */
+    max-width: 350px; /* Optionnel : limite la largeur si nécessaire */
+    background-color: #3A3F5A;
+    list-style: none;
+    border-radius: 5px;
+    margin: 5px 0 0;
+    padding: 10px 20px; /* Ajuster l'espacement entre le texte et les bords */
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Permet d'afficher les menusdéroulant en survolant les boutons */
+/* .dropdown:hover .dropdown-menu {
+    display: block;
+} */
+
+/* Alignement des éléments du menu déroulant */
+.dropdown-menu li {
+    display: block; /* Aligne les éléments les uns sous les autres */
+    margin: 5px 0; /* Espacement vertical entre les éléments */
+}
+
+.dropdown-menu li:hover {
+    background-color: #50567A;
+}
+
+header.expanded {
+    transition: height 0.3s ease;
+}
+
+/* Style des liens dans le menu déroulant */
+.dropdown-menu li a {
+    display: block; /* Chaque lien prend une ligne entière */
+    background-color: #3A3F5A;
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 1rem;
+    text-align: left; /* Aligne le texte à gauche */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    line-height: 1.5; /* Espacement vertical entre les lignes de texte */
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #50567A; /* Si vous voulez conserver le changement de fond */
+    font-size: 1rem; /* Empêche le texte de s'agrandir */
+    color: white;
+}
+
+/* Menu déroulant visible */
+.dropdown.active .dropdown-menu {
+    display: block; /* Affiche le menu déroulant */
+    border-radius: 5px;
+}
+
+.dropdown-button a,
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+}
+

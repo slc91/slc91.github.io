@@ -1,0 +1,152 @@
+/* Général pour body et header */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4; /* Couleur de fond du corps principal */
+    border-radius: 15px; /* Bords arrondis pour le corps principal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+
+}
+
+/* Première zone */
+
+/* Corps principal : grille */
+.main-content {
+    display: grid;
+    grid-template-columns: 4fr 1fr; /* 2/3 pour le contenu, 1/3 pour le calendrier */
+    gap: 40px; /* Espace entre les colonnes */
+    margin: 20px 20px; /* Espacement autour du corps principal */
+    padding: 10px 20px;
+}
+
+/* Zone principale du contenu */
+.content-area {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Texte principal */
+.content-area h1 {
+    margin-top: 0;
+    color: #16192C;
+}
+
+.content-area p {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Deuxième zone */
+.second-content {
+    display: grid;
+    gap: 20px; /* Espace entre les colonnes */
+    margin: 20px; /* Espacement autour du corps principal */
+    padding: 10px 20px;
+}
+
+/* Planning */
+
+table.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table.schedule th, table.schedule td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table.schedule th {
+    background-color: blue;
+    color: white;
+}
+
+table.schedule td {
+    background-color: #fff;
+}
+
+table.schedule td:hover {
+    background-color: #f2f2f2;
+}
+
+td {
+    height: 30px;
+    vertical-align: top;
+}
+
+thead {
+    font-weight: bold;
+}
+
+.tarifs-wrapper {
+    align-self: start; /* Aligner le calendrier en haut */
+    right: 10px;
+}
+
+.tarifs-container {
+    background-color: #16192C;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px; /* Réduire le padding */
+    width: 250px; /* Définir une largeur fixe plus petite */
+}
+
+.tarifs-container h2 {
+    text-align: center;
+    font-size: 1.2rem; /* Réduire la taille du titre */
+    margin-bottom: 15px; /* Réduire l'espacement sous le titre */
+}
+
+.tarifs-container h3 {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.tarifs-container a {
+    color: white;
+    text-decoration: none;
+}
+
+a.download {
+    color: white;
+    text-decoration: none;
+}
+
+a.download:hover {
+    color: green;
+    text-decoration: none;
+}
+
+.tarifs-container a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+tbody tr td.sophie {
+    background-color: pink;
+    vertical-align: middle;
+}
+
+tbody tr td.pascal {
+    background-color: rgb(59, 151, 231);
+    vertical-align: middle;
+}
+
+tbody tr td.matin,
+tbody tr td.soir {
+    vertical-align: middle;
+}
+
+tbody tr td.matin {
+    background-color: rgb(243, 219, 6);
+}
+
+tbody tr td.soir {
+    background-color: rgb(68, 214, 68);
+}

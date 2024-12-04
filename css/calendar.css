@@ -1,0 +1,79 @@
+/* Onglet calendrier (aligné à droite) */
+.calendar-wrapper {
+    align-self: start; /* Aligner le calendrier en haut */
+    right: 10px;
+}
+
+.calendar-container {
+    background-color: #16192C;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px; /* Réduire le padding */
+    width: 250px; /* Définir une largeur fixe plus petite */
+}
+
+/* Titre du calendrier */
+.calendar-container h2 {
+    text-align: center;
+    font-size: 1.2rem; /* Réduire la taille du titre */
+    margin-bottom: 15px; /* Réduire l'espacement sous le titre */
+}
+
+/* Liste des événements */
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.event-item {
+    margin-bottom: 8px; /* Réduire l'espacement entre les événements */
+    border-radius: 5px;
+    background-color: #202442;
+    cursor: pointer;
+    padding: 8px; /* Réduire le padding */
+    transition: background-color 0.3s ease;
+}
+
+.event-item:hover {
+    background-color: #202442;
+}
+
+.event-summary {
+    font-weight: bold;
+}
+
+.event-details {
+    margin-top: 8px; /* Réduire l'espacement au-dessus des détails */
+    padding: 8px; /* Réduire le padding interne */
+    background-color: #30355A;
+    border-radius: 5px;
+    font-size: 0.85rem; /* Réduire légèrement la taille du texte */
+    line-height: 1.4; /* Ajuster l'espacement entre les lignes */
+    color: #ddd;
+}
+
+.event-item:hover:not(:has(.event-details:hover)) {
+    background-color: #50567A;
+}
+
+
+.calendar-container h3 a {
+    text-decoration: none;
+    color: white;
+}
+
+.calendar-container h3 a:hover {
+    color: blue;
+}
+
+.calendar-container h3 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#calendar {
+    width: 100%;
+    height: 600px; /* ou toute autre hauteur adaptée */
+}
