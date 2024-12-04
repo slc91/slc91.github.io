@@ -1,26 +1,21 @@
-/* Général pour body et header */
+/* Général pour body */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-
-    background-color: #f4f4f4; /* Couleur de fond du corps principal */
-    border-radius: 15px; /* Bords arrondis pour le corps principal */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
-
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* Première zone */
 
 /* Corps principal : grille */
 .main-content {
     display: grid;
     grid-template-columns: 4fr 1fr; /* 2/3 pour le contenu, 1/3 pour le calendrier */
-    gap: 40px; /* Espace entre les colonnes */
-    margin: 20px 20px; /* Espacement autour du corps principal */
+    gap: 40px;
+    margin: 20px 20px;
     padding: 10px 20px;
 }
 
-/* Zone principale du contenu */
 .content-area {
     background-color: #ffffff;
     padding: 20px;
@@ -42,13 +37,12 @@ body {
 /* Deuxième zone */
 .second-content {
     display: grid;
-    gap: 20px; /* Espace entre les colonnes */
-    margin: 20px; /* Espacement autour du corps principal */
+    gap: 20px;
+    margin: 20px;
     padding: 10px 20px;
 }
 
 /* Planning */
-
 table.schedule {
     width: 100%;
     border-collapse: collapse;
@@ -66,25 +60,13 @@ table.schedule th {
     color: white;
 }
 
-table.schedule td {
-    background-color: #fff;
-}
-
 table.schedule td:hover {
     background-color: #f2f2f2;
 }
 
-td {
-    height: 30px;
-    vertical-align: top;
-}
-
-thead {
-    font-weight: bold;
-}
-
+/* Tarifs */
 .tarifs-wrapper {
-    align-self: start; /* Aligner le calendrier en haut */
+    align-self: start;
     right: 10px;
 }
 
@@ -93,14 +75,15 @@ thead {
     color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 15px; /* Réduire le padding */
-    width: 250px; /* Définir une largeur fixe plus petite */
+    padding: 15px;
+    width: 100%; /* Passe à 100% pour éviter le débordement */
+    max-width: 300px;
 }
 
 .tarifs-container h2 {
     text-align: center;
-    font-size: 1.2rem; /* Réduire la taille du titre */
-    margin-bottom: 15px; /* Réduire l'espacement sous le titre */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
 .tarifs-container h3 {
@@ -108,45 +91,58 @@ thead {
     font-size: 1rem;
 }
 
-.tarifs-container a {
-    color: white;
-    text-decoration: none;
+/* Responsiveness avec Media Queries */
+@media screen and (max-width: 768px) {
+    /* Corps principal : empile les colonnes */
+    .main-content {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 20px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    /* Zone principale : ajustement */
+    .content-area {
+        padding: 15px;
+    }
+
+    /* Texte principal */
+    .content-area h1 {
+        font-size: 1.5rem; /* Réduire légèrement la taille */
+    }
+
+    .content-area p {
+        font-size: 1rem;
+    }
+
+    /* Tarifs */
+    .tarifs-container {
+        margin: 0 auto;
+    }
+
+    /* Calendrier : pleine largeur */
+    .calendar-container {
+        width: 100%;
+    }
+
+    /* Réduction des marges et paddings */
+    table.schedule th, table.schedule td {
+        padding: 8px;
+    }
 }
 
-a.download {
-    color: white;
-    text-decoration: none;
-}
+@media screen and (max-width: 480px) {
+    /* Texte principal : plus petit sur très petits écrans */
+    .content-area h1 {
+        font-size: 1.3rem;
+    }
 
-a.download:hover {
-    color: green;
-    text-decoration: none;
-}
+    .content-area p {
+        font-size: 0.9rem;
+    }
 
-.tarifs-container a:hover {
-    color: blue;
-    text-decoration: none;
-}
-
-tbody tr td.sophie {
-    background-color: pink;
-    vertical-align: middle;
-}
-
-tbody tr td.pascal {
-    background-color: rgb(59, 151, 231);
-    vertical-align: middle;
-}
-
-tbody tr td.matin,
-tbody tr td.soir {
-    vertical-align: middle;
-}
-
-tbody tr td.matin {
-    background-color: rgb(243, 219, 6);
-}
-
-tbody tr td.soir {
-    background-color: rgb(68, 214, 68);
+    /* Tarifs */
+    .tarifs-container h2 {
+        font-size: 1rem;
+    }
 }
