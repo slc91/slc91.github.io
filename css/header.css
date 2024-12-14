@@ -195,7 +195,7 @@ header.expanded {
         flex-direction: column; /* Aligne les boutons verticalement */
         align-items: center; /* Centre horizontalement les boutons */
         position: absolute; /* Positionne la bannière en haut de l'écran */
-        top: 70px; /* Ajuste la hauteur par rapport à la bannière principale */
+        top: 90px; /* Ajuste la hauteur par rapport à la bannière principale */
         left: 0;
         width: 100%; /* Prend toute la largeur de l'écran */
         height: calc(100vh - 70px);
