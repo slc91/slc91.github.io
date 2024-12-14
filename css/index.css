@@ -83,6 +83,11 @@ table.schedule {
     border-collapse: collapse;
     margin-top: 20px;
 }
+
+.main-content, .content-area {
+    max-width: 100%;
+    overflow-x: auto;    
+}
 }
 
 table.schedule th, table.schedule td {
