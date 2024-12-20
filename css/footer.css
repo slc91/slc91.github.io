@@ -110,3 +110,19 @@ ul li a {
 .footer-bottom p {
     margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Les sections seront alignées en colonne */
+        align-items: center; /* Centrer les sections horizontalement */
+    }
+
+    .footer-container > div {
+        width: 100%; /* Les sections prendront toute la largeur */
+        text-align: center; /* Centrer le contenu textuel */
+    }
+
+    .footer-bottom {
+        text-align: center; /* Centrer le bas du footer */
+    }
+}
