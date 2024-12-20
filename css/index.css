@@ -51,7 +51,6 @@ ul.puces {
     text-align: left; /* Aligne le texte à gauche */
     width: auto; /* Assure que la largeur de la box est juste autour du texte */
     cursor: pointer;
-
 }
 
 /* Texte principal */
@@ -74,7 +73,6 @@ ul.puces {
     margin: 20px; /* Espacement autour du corps principal */
     padding: 10px 20px;
     min-width: 0; /* Permet à la zone de se redimensionner correctement */
-
 }
 
 /* Planning */
@@ -82,7 +80,7 @@ table.schedule {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    table-layout: fixed; /* Applique des largeurs fixes aux colonnes sauf la première */
+    table-layout: auto; /* Applique des largeurs fixes aux colonnes sauf la première */
 }
 
 table.schedule th:first-child,
@@ -100,12 +98,11 @@ table.schedule td:first-child {
     -webkit-overflow-scrolling: touch; /* Pour un défilement fluide sur iOS */
     margin-top: 20px;
     box-sizing: border-box; /* Assure que les bordures sont incluses dans la largeur totale */
-
 }
 
 table.schedule {
     width: 100%;
-    table-layout: fixed; /* Colonne de largeur fixe */
+    table-layout: auto; /* Colonne de largeur fixe */
     border-collapse: collapse;
 }
 
