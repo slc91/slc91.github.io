@@ -1,0 +1,244 @@
+/* Général pour body et header */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Couleur de fond du corps principal */
+    border-radius: 15px; /* Bords arrondis pour le corps principal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+
+}
+
+/* Première zone */
+
+/* Corps principal : grille */
+.main-content {
+    display: grid;
+    grid-template-columns: 4fr 1fr; /* 2/3 pour le contenu, 1/3 pour le calendrier */
+    gap: 40px; /* Espace entre les colonnes */
+    margin: 20px 20px; /* Espacement autour du corps principal */
+    padding: 10px 20px;
+}
+
+/* Pour les petits écrans (mobile) */
+@media screen and (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr; /* Une seule colonne pour le mobile */
+        gap: 20px; /* Réduit l'espace entre les éléments */
+    }
+
+}
+
+ul.puces {
+    list-style-type: disc; 
+    padding: 10px 0px 10px 20px;
+}
+
+/* Zone principale du contenu */
+.content-area {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 0; /* Permet à la zone de se redimensionner correctement */
+}
+
+.content-area ul li.activités {
+    display: inline-block;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left; /* Aligne le texte à gauche */
+    width: auto; /* Assure que la largeur de la box est juste autour du texte */
+    cursor: pointer;
+
+}
+
+/* Texte principal */
+.content-area h1 {
+    margin-top: 0;
+    color: #16192C;
+    font-size: 1.5rem;
+}
+
+
+.content-area p {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Deuxième zone */
+.second-content {
+    display: grid;
+    gap: 20px; /* Espace entre les colonnes */
+    margin: 20px; /* Espacement autour du corps principal */
+    padding: 10px 20px;
+    min-width: 0; /* Permet à la zone de se redimensionner correctement */
+
+}
+
+/* Planning */
+table.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; /* Applique des largeurs fixes aux colonnes sauf la première */
+}
+
+table.schedule th:first-child,
+table.schedule td:first-child {
+    width: auto !important; /* Laisse la première colonne s'ajuster automatiquement */
+    max-width: none; /* Retire toute restriction de largeur */
+    min-width: 30px; /* Optionnel : Définir une largeur minimale */
+}
+
+@media screen and (max-width: 768px) {
+
+.schedule-container {
+    width: 100%;
+    overflow-x: auto; /* Permet le défilement horizontal */
+    -webkit-overflow-scrolling: touch; /* Pour un défilement fluide sur iOS */
+    margin-top: 20px;
+    box-sizing: border-box; /* Assure que les bordures sont incluses dans la largeur totale */
+
+}
+
+table.schedule {
+    width: 100%;
+    table-layout: fixed; /* Colonne de largeur fixe */
+    border-collapse: collapse;
+}
+
+
+.main-content, .content-area {
+    max-width: 100%;
+    overflow-x: auto;    
+}
+}
+
+table.schedule th, 
+table.schedule td {
+    width: 20%; /* 5 colonnes = 100% / 5 */
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    word-wrap: break-word; /* Coupe les mots longs si nécessaire */
+}
+
+table.schedule th {
+    background-color: blue;
+    color: white;
+}
+
+table.schedule td {
+    background-color: #fff;
+}
+
+table.schedule td:hover {
+    background-color: #f2f2f2;
+}
+
+td {
+    height: 30px;
+    vertical-align: top;
+}
+
+thead {
+    font-weight: bold;
+}
+
+.tarifs-wrapper {
+    align-self: start; /* Aligner le calendrier en haut */
+    right: 10px;
+}
+
+.tarifs-container {
+    background-color: #16192C;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px; /* Réduire le padding */
+    max-width: 100%; /* Définir une largeur fixe plus petite */
+}
+
+.tarifs-container h2 {
+    text-align: center;
+    font-size: 1.2rem; /* Réduire la taille du titre */
+    margin-bottom: 15px; /* Réduire l'espacement sous le titre */
+}
+
+.tarifs-container h3 {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.tarifs-container a {
+    color: white;
+    text-decoration: none;
+}
+
+a.download {
+    color: white;
+    text-decoration: none;
+}
+
+a.download:hover {
+    color: green;
+    text-decoration: none;
+}
+
+.tarifs-container a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+tbody tr td.sophie_9_10 {
+    background-color: rgb(255, 146, 0);
+    vertical-align: middle;
+}
+
+tbody tr td.sophie_10_11 {
+    background-color: rgb(141, 249, 0);
+    vertical-align: middle;
+}
+
+tbody tr td.pascal_1 {
+    background-color: rgb(201, 143, 200);
+    vertical-align: middle;
+}
+
+tbody tr td.ellyne_1 {
+    background-color: rgb(252, 243, 5);
+    vertical-align: middle;
+}
+tbody tr td.ellyne_2 {
+    background-color: rgb(255, 223, 128);
+    vertical-align: middle;
+}
+
+tbody tr td.ellyne_3 {
+    background-color: rgb(255, 208, 64);
+    vertical-align: middle;
+}
+tbody tr td.ellyne_4 {
+    background-color: rgb(255, 192, 0);
+    vertical-align: middle;
+}
+
+tbody tr td.ellyne_5 {
+    background-color: rgb(173, 205, 234);
+    vertical-align: middle;
+}
+tbody tr td.ellyne_6 {
+    background-color: rgb(141, 155, 255);
+    vertical-align: middle;
+}
+tbody tr td.ellyne_7 {
+    background-color: rgb(117, 213, 255);
+    vertical-align: middle;
+}
+
+tbody tr td.matin,
+tbody tr td.soir {
+    vertical-align: middle;
+}

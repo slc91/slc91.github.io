@@ -1,0 +1,112 @@
+/* Style général pour le footer */
+footer {
+    background-color: #16192C;
+    color: white;
+    padding: 0px 0; /* Padding du footer en haut et en bas */
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Container pour organiser les sections dans le footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Espacement égal entre les sections */
+    align-items: flex-start; /* Alignement des sections en haut */
+    padding: 0 20px; /* Espacement à gauche et à droite du footer */
+    gap: 30px; /* Espacement entre les sections */
+    width: 100%; /* S'assurer que le conteneur prend toute la largeur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+}
+
+/* Section des réseaux sociaux */
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligner les icônes verticalement au centre */
+    width: 30%; /* Donner une largeur fixe aux sections */
+}
+
+/* Section des informations de contact */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligner les informations de contact au centre */
+    width: 30%; /* Donner une largeur fixe aux sections */
+}
+
+/* Section des liens utiles */
+.useful-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligner les liens au centre */
+    width: 30%; /* Donner une largeur fixe aux sections */
+}
+
+/* Style des éléments de chaque section */
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Espacement entre les liens */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Utilité ? à garder ? de base à 8px */
+ul li {
+    margin-bottom: 0px;
+}
+
+/* Liens dans les sections */
+ul li a {
+    color: white; /* Liens en blanc par défaut */
+    text-decoration: none; /* Supprimer le soulignement */
+    transition: color 0.3s ease; /* Animation pour un changement de couleur fluide */
+}
+
+/* S'assurer que les liens sont blancs par défaut, y compris les liens visités */
+.contact-info p a,
+.useful-links p a {
+    color: white; /* Liens en blanc par défaut */
+    text-decoration: none; /* Supprimer le soulignement */
+}
+
+/* Liens dans les sections Contact et Liens Utiles (ajouté le hover aussi) */
+.contact-info p a:hover,
+.useful-links p a:hover {
+    color: #1839be; /* Change la couleur du texte au survol */
+}
+
+/* Liens des réseaux sociaux */
+.social-media a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+/* Icônes des réseaux sociaux */
+.social-media .facebook:hover {
+    color: #3b5998; /* Couleur Facebook */
+}
+
+.social-media .whatsapp:hover {
+    color: #25d366; /* Couleur WhatsApp */
+}
+
+.social-media .instagram:hover {
+    color: #e1306c; /* Couleur Instagram */
+}
+
+/* Bas du footer */
+.footer-bottom {
+    background-color: #101624;
+    padding: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
