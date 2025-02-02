@@ -1,284 +1,214 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>SLC - Calendrier</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/calendar.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/page-calendar.css">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css">
-    
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/calendar.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/page-calendar.css" />
+    <link rel="stylesheet" href="../css/pages-sections.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <div class="main-banner">
-            <a href="../index.html">
-                <img src="../images/logo-slc.PNG" alt="Logo" class="banner-logo" >
-            </a>
-            <a class="title" href="../index.html">Sport Loisir Culture</a>
-            <!-- Bouton burger -->
-            <button class="burger-menu" aria-label="Menu">
-                &#9776; <!-- Icône burger -->
-            </button>
-        </div>
-        
-        <ul class="sub-banner" id="mobileMenu">
+      <div class="main-banner">
+        <a href="../index.html">
+          <img src="../images/logo-slc.PNG" alt="Logo" class="banner-logo" />
+        </a>
+        <a class="title" href="../index.html">Sport Loisir Culture</a>
+        <!-- Bouton burger -->
+        <button class="burger-menu" aria-label="Menu">
+          &#9776;
+          <!-- Icône burger -->
+        </button>
+      </div>
+
+      <ul class="sub-banner" id="mobileMenu">
+        <li>
+          <button class="dropdown-button">
+            <a href="../index.html">Accueil</a>
+          </button>
+        </li>
+
+        <li class="dropdown">
+          <button class="dropdown-button">Sport</button>
+          <ul class="dropdown-menu">
+            <li><a href="../pages/aquagym.html">Aquagym</a></li>
+            <li><a href="../pages/chanbara.html">Chanbara</a></li>
+            <li><a href="../pages/gymforme.html">Gym'forme</a></li>
+            <li><a href="../pages/natation.html">Natation</a></li>
+            <li><a href="../pages/tennis.html">Tennis</a></li>
+            <li><a href="../pages/vtt.html">VTT</a></li>
+            <li><a href="../pages/yoga.html">Yoga</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <button class="dropdown-button">Loisir</button>
+          <ul class="dropdown-menu">
+            <li><a href="../pages/poterie.html">Poterie</a></li>
             <li>
-            <button class="dropdown-button"><a href="../index.html">Accueil</a></button>
+              <a href="../pages/refectiondefauteuils.html"
+                >Réfection de fauteuils</a
+              >
             </li>
+          </ul>
+        </li>
 
-            <li class="dropdown">
-                <button class="dropdown-button">Sport</button>
-                <ul class="dropdown-menu">
-                    <li><a href="../pages/aquagym.html">Aquagym</a></li>
-                    <li><a href="../pages/chanbara.html">Chanbara</a></li>
-                    <li><a href="../pages/gymforme.html">Gym'forme</a></li>
-                    <li><a href="../pages/natation.html">Natation</a></li>
-                    <li><a href="../pages/tennis.html">Tennis</a></li>
-                    <li><a href="../pages/vtt.html">VTT</a></li>
-                    <li><a href="../pages/yoga.html">Yoga</a></li>
-                </ul>    
+        <li class="dropdown">
+          <button class="dropdown-button">Culture</button>
+          <ul class="dropdown-menu">
+            <li><a href="../pages/anglais.html">Anglais</a></li>
+            <li>
+              <a href="../pages/chiffresetlettres.html">Chiffres & Lettres</a>
             </li>
+            <li><a href="../pages/scrabble.html">Scrabble</a></li>
+            <li><a href="../pages/theatre.html">Théâtre</a></li>
+          </ul>
+        </li>
 
-            <li class="dropdown">
-                <button class="dropdown-button">Loisir</button>
-                <ul class="dropdown-menu">
-                    <li><a href="../pages/poterie.html">Poterie</a></li>
-                    <li><a href="../pages/refectiondefauteuils.html">Réfection de fauteuils</a></li>
-                </ul>  
-            </li>
-
-            <li class="dropdown">
-                <button class="dropdown-button">Culture</button>
-                <ul class="dropdown-menu">
-                    <li><a href="../pages/anglais.html">Anglais</a></li>
-                    <li><a href="../pages/chiffresetlettres.html">Chiffres & Lettres</a></li>
-                    <li><a href="../pages/scrabble.html">Scrabble</a></li>
-                    <li><a href="../pages/theatre.html">Théâtre</a></li>
-                </ul>  
-            </li>
-
-            <!-- <button class="dropdown-button"><a href="pages/calendar.html">Calendrier</a></button> -->
-        </ul>
-        <script src="../json/menu.js"></script>
-
+        <!-- <button class="dropdown-button"><a href="pages/calendar.html">Calendrier</a></button> -->
+      </ul>
+      <script src="../json/menu.js"></script>
     </header>
 
     <main class="main-content">
-        <!-- Section principale -->
-        <div class="content-area">
-            <h1>Chanbara</h1>
-            <p>
-                <B>Escrime Japonaise</B> à la fois ludique et véritable technique du sabre, ouvert aussi bien aux femmes qu’aux hommes.
-                Le Chanbara s’appuie sur les valeurs du code moral du Judo.
-                Très tonique, le Chanbara vous permettra de travailler la motricité, le tonus, la coordination, les réflexes, l’endurance, le cardio et les abdos dans une ambiance très conviviale…
-                Lundi : 19h00 à 20h30 salle des Genêts : ados/adultes, 
-                Vendredi : 17h45 à 18h45 cours enfants (5/10 ans) 19h00 à 20h30 ados/adultes et 20h30 à 22h cours avancé, Pôle associatif des Mares Yvon 
-                Venez essayer et vous renseigner auprès de Philippe, Délégué Technique Île de France de Sport Chanbara.
-                Contact et renseignements : Philippe 06 82 98 92 83, philippe.lereste@wanadoo.fr, sport.loisir.culture@gmail.com
-                
-            </p>
+      <!-- Section principale -->
+      <div class="content-area">
+        <h1>Chanbara</h1>
+        <p class="intro">
+          <strong>Escrime Japonaise</strong> à la fois ludique et véritable
+          technique du sabre, ouvert aussi bien aux femmes qu’aux hommes. Le
+          Chanbara s’appuie sur les valeurs du code moral du Judo. Très tonique,
+          le Chanbara vous permettra de travailler la motricité, le tonus, la
+          coordination, les réflexes, l’endurance, le cardio et les abdos dans
+          une ambiance très conviviale…
+        </p>
+
+        <div class="info-section">
+          <p><strong>✅​ Public :</strong> Adultes et enfants</p>
+          <p><strong>🕐 Horaires :</strong></p>
+          <ul class="schedule-section">
+            <li>
+              <strong>Lundi :</strong>
+              <ul>
+                <li>19h00 à 20h30 - ados/adultes</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Vendredi :</strong>
+              <ul>
+                <li>17h45 à 18h45 - enfants (5/10 ans)</li>
+                <li>19h00 à 20h30 - ados/adultes</li>
+                <li>20h30 à 22h - avancé</li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
-        <!-- Onglet tarif -->
-        <aside class="tarifs-wrapper">
-            <div class="tarifs-container">
+        <div class="location-section">
+          <p><strong>📍 Lieu :</strong></p>
+          <p class="loc">
+            <strong>Lundi :</strong>
+            <a
+              href="https://www.google.com/maps?hl=fr&gl=fr&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x47e5d9a08b95551f:0x82c62ac9c5e0bf56"
+              target="_blank"
+              >Salle des Genêts</a
+            >
+          </p>
+          <p class="loc">
+            <strong>Vendredi :</strong>
+            <a
+              href="https://www.google.com/maps?hl=fr&gl=fr&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x47e5d9a08b95551f:0x82c62ac9c5e0bf56"
+              target="_blank"
+              >Pôle associatif des Mares Yvon</a
+            >
+          </p>
+        </div>
 
-                <h2>Tarifs</h2>
-                <h3 >Adhésion : 25 €</h3>
-                <h3>Cotisation : 124 €</h3>
-            </div>
-        </aside>
+        <div class="contact-section">
+          <p>
+            Venez essayer et vous renseigner auprès de Philippe, Délégué
+            Technique Île de France de Sport Chanbara.
+          </p>
+          <p><strong>Contact et renseignements :</strong> Philippe Lereste</p>
+          <p>Tel : <a href="tel:+0682989283">06 82 98 92 83</a></p>
+          <p>
+            Email :
+            <a href="mailto:philippe.lereste@wanadoo.fr"
+              >philippe.lereste@wanadoo.fr</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- Onglet tarif -->
+      <aside class="tarifs-wrapper">
+        <div class="tarifs-container">
+          <h2>Tarifs</h2>
+          <h3>Adhésion : 25 €</h3>
+          <h3>Cotisation : 124 €</h3>
+        </div>
+      </aside>
     </main>
+  </body>
 
-    <section class="second-content">
-        <div class="content-area schedule-container" >
-
-        <h1>Planning Hebdomadaire</h1>
-
-        <table class="schedule">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Lundi</th>
-                    <th>Mardi</th>
-                    <th>Mercredi</th>
-                    <th>Jeudi</th>
-                    <th>Vendredi</th>
-                    <th>Samedi</th>
-                    <th>Dimanche</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>10:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>11:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>12:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>13:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>15:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>16:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>17:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>18:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>19:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    </section>
-
-<footer>
+  <footer>
     <div class="footer-container">
-        <!-- Section des Réseaux Sociaux -->
-        <div class="social-media">
-            <h3>Suivez-nous</h3>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/slcstmichelsurorge/?locale=fr_FR" target="_blank" class="facebook">
-                    <i class="lab la-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/slc_st_michel/" target="_blank" class="instagram">
-                    <i class="lab la-instagram"></i>
-                </a>
-                <a href="" target="_blank" class="whatsapp">
-                    <i class="lab la-whatsapp"></i>
-                </a>
-            </div>
+      <!-- Section des Réseaux Sociaux -->
+      <div class="social-media">
+        <h3>Suivez-nous</h3>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/slcstmichelsurorge/?locale=fr_FR"
+            target="_blank"
+            class="facebook"
+          >
+            <i class="lab la-facebook"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/slc_st_michel/"
+            target="_blank"
+            class="instagram"
+          >
+            <i class="lab la-instagram"></i>
+          </a>
+          <a href="" target="_blank" class="whatsapp">
+            <i class="lab la-whatsapp"></i>
+          </a>
         </div>
+      </div>
 
-        <!-- Section des Informations de Contact -->
-        <div class="contact-info">
-            <h3>Contactez-nous</h3>
-            <div>
-                <p>Email : <a href="mailto:contact@slc.com">sport.loisir.culture@gmail.com</a></p>
-            </div>
+      <!-- Section des Informations de Contact -->
+      <div class="contact-info">
+        <h3>Contactez-nous</h3>
+        <div>
+          <p>
+            Email :
+            <a href="mailto:contact@slc.com">sport.loisir.culture@gmail.com</a>
+          </p>
         </div>
+      </div>
 
-        <!-- Section Liens Utiles -->
-        <div class="useful-links">
-            <h3>Liens Utiles</h3>
-            <div>
-                <p><a href="conditions.html">quoi-mettre</a></p>
-            </div>
+      <!-- Section Liens Utiles -->
+      <div class="useful-links">
+        <h3>Liens Utiles</h3>
+        <div>
+          <p><a href="conditions.html">quoi-mettre</a></p>
         </div>
+      </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2024 SLC - Tous droits réservés</p>
+      <p>&copy; 2024 SLC - Tous droits réservés</p>
     </div>
-</footer>
-</body>
-
+  </footer>
 </html>

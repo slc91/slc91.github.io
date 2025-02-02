@@ -1,0 +1,37 @@
+.intro {
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+.info-section, .location-section, .contact-section {
+    margin-top: 20px;
+}
+
+.info-section ul, .location-section p, .contact-section p {
+    margin: 10px 0;
+}
+
+.schedule-section {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 22px;
+}
+
+.schedule-section li {
+    margin-bottom: 10px;
+}
+
+.schedule-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.location-section  {
+    color: black;
+}
+
+.location-section .loc  {
+    color: black;
+    padding-left: 22px;
+
+}
