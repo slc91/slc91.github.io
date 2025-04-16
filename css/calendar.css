@@ -4,13 +4,28 @@
     right: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .calendar-wrapper {
+        margin: 10px 0;
+    }    
+}
+
 .calendar-container {
-    background-color: #16192C;
+    background-color: transparent;
     color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 15px; /* Réduire le padding */
     max-width: 100%; /* Définir une largeur fixe plus petite */
+    margin: 0 auto; /* Centre le conteneur si sa largeur est limitée */
+    padding: 15px; /* Ajoute un peu d'espace intérieur */
+
+}
+
+.calendar-container .title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(30,41,59);
+    font-weight: bold;
+
 }
 
 /* Titre du calendrier */
@@ -22,36 +37,80 @@
 
 /* Liste des événements */
 .event-list {
+    display: flex; /* Active Flexbox */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 15px; /* Espacement entre les éléments */
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0px;
+}
+
+.event-summary {
+    padding: 10px; /* Espace intérieur */
+
 }
 
 .event-item {
     margin-bottom: 8px; /* Réduire l'espacement entre les événements */
-    border-radius: 5px;
-    background-color: #202442;
+    /* background-color: rgb(30,41,59); */
     cursor: pointer;
-    padding: 8px; /* Réduire le padding */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    width: 300px; /* Définit une largeur fixe */
+    height: 300px; /* Définit une hauteur fixe égale à la largeur */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement le contenu */
+    align-items: center; /* Centre horizontalement le contenu */
+    text-align: center; /* Centre le texte */
+
 }
 
 .event-item:hover {
     background-color: #202442;
+    transform: translateY(-10px);
 }
 
 .event-summary {
+    background-image: url("../images/ronde-saint-michelloise.jpg");
+    background-size: cover;
+    background-position: center;
     font-weight: bold;
+    width: 100%; /* Assure qu'il prend toute la largeur de la case */
+    padding: 10px; /* Garde l'espace intérieur */
+
+    display: flex;
+    flex-direction: column; /* Si tu as plusieurs lignes de texte à centrer */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center; /* Assure le centrage du texte */
+    flex-grow: 1; /* Permet à summary de prendre l'espace restant avant details */
+    font-size: 1.5rem;
+    color:white;
 }
 
 .event-details {
-    margin-top: 8px; /* Réduire l'espacement au-dessus des détails */
-    padding: 8px; /* Réduire le padding interne */
-    background-color: #30355A;
-    border-radius: 5px;
+    width: 100%;
+    background-color: white;
     font-size: 0.85rem; /* Réduire légèrement la taille du texte */
-    line-height: 1.4; /* Ajuster l'espacement entre les lignes */
-    color: #ddd;
+    margin-top: auto;
+    height: 20%;
+
+    display: flex;
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center; /* Assure le centrage du texte */
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.event-details p {
+    margin: 0;
+    padding: 0;
 }
 
 .event-item:hover:not(:has(.event-details:hover)) {

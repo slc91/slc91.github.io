@@ -1,227 +1,246 @@
-header {
+:root {
+    --btn-width: 160px;
+    --primary-color: rgb(30,41,59);
+    --accent-color: #3B82F6;
+    --light-color: #E0F2FE;
+    --text-color-dark: #EBF2FA;
+    --font-size: 18px;
+    --rounded: 12px;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--light-color);
+color: var(--primary-color);
+font-size: var(--font-size);
+line-height: 1.6;
+}
+
+#banner {
+    display: block;
     position: sticky;
     top: 0;
-    z-index: 1;
-}
+    z-index: 9999;
 
-.main-banner {
-    display: flex;
-    align-items: center; /* Centre verticalement l'image et le titre */
-    justify-content: flex-start; /* Aligne l'image et le titre à gauche */
-    background-image: url('../images/terrain.jpg'); /*Mettez le chemin de votre image */
-    /* background-image: url('../images/slc_noel.png'); */
-    background-size: cover; /* Couvre toute la bannière */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche l'image de se répéter */
-    padding: 40px; /* Ajustez les marges internes */
-    position: relative;
-    font-size: 2rem;
+    background-image: url('../images/terrain.jpg');
+    background-size: cover;
+    background-position: center;
+    background-position: top; 
+    /* background-color: var(--primary-color); */
     color: white;
-    overflow: hidden;
+}
+
+.banner-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* background-image: url('../slc91.github.io/images/terrain.jpg'); */
+    background-image: none;
+    padding: 20px;
+}
+
+.left-section {
+    display: flex;
+    align-items: flex-start; /* Pas center, pour que le logo ne descende pas */
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.banner-top .block-titles {
+    display: flex;
+    align-items: left;
+    margin-left: 20px;
+}
+
+.banner-top .block-titles .title {
+    color: white; /* Assure la visibilité sur l'image de fond */
+    margin-bottom: 0; /* <<< LA CLÉ : Supprime la marge inférieure par défaut */
+    font-size: 1.8rem; /* Ajuste la taille si besoin */
+    transition: font-size 0.3s ease;
+    margin-left: 0;
+    margin-top: 10px;
 
 }
 
-
-.main-banner a {
-    display: inline-block; /* Garantit que l'image est traitée comme un élément en ligne-bloc */
-    vertical-align: middle; /* Centre verticalement l'image avec le texte environnant */
-    text-decoration: none; /* Enlève le soulignement si nécessaire */
+#banner a:link {
+    text-decoration: none;
 }
 
-/* Style pour l'image dans la bannière */
-.banner-logo {
+.banner-top .block-titles .sous-title {
+    color: white; /* Assure la visibilité sur l'image de fond */
+    margin-bottom: 0; /* <<< LA CLÉ : Supprime la marge inférieure par défaut */
+    margin-right: auto; /* Pousse les éléments suivants vers la droite */
+    font-size: 0.9rem; /* Ajuste la taille si besoin */
+    text-decoration: none;
+}
+
+.banner-top img {
     border-radius: 50px;
-    height: 50%; /* Taille proportionnelle à la hauteur de la bannière */
-    max-height: 80px; /* Limite la taille de l'image pour l'état réduit */
-    object-fit: contain; /* Garde les proportions de l'image */
-    transition: height 0.3s ease; /* Transition fluide sur la taille */
-}
-
-/* Style du titre */
-.title {
-    color: white;
-    font-size: 3rem;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: left; /* Aligne le texte à gauche */
-    margin-left: 20px; /* Ajoute un petit espace entre l'image et le titre */
-    z-index: 1;
-    white-space: nowrap; /* Empêche que le texte se brise en plusieurs lignes */
-}
-
-/* Style du sous-bandeau */
-.sub-banner {
-    background-color: #202442;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-    gap: 15px; /* Espacement entre les boutons */
-}
-
-/* Style des boutons */
-.dropdown-button {
-    background-color: #3A3F5A;
-    color: white;
-    border: none;
-    padding: 10px 40px;
-    font-size: 1rem;
+    margin: 0px 20px; 
+    height: 50%; 
+    max-height: 70px; 
+    object-fit: contain; 
+    transition: max-height 0.3s ease; 
     cursor: pointer;
-    border-radius: 5px;
-    min-width: 150px;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour la couleur de fond et l'agrandissement */
-    transform-origin: center; /* L'agrandissement se fait depuis le centre */
 }
 
-.dropdown-button:hover {
-    background-color: #50567A;
-    transform: scale(1.1); /* Agrandit légèrement le bouton sans changer son positionnement */
-}
-
-/* Conteneur du menu déroulant */
 .dropdown {
-    position: relative; /* Permet de positionner le menu déroulant à l'intérieur de chaque bouton */
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    background-image: none;
+    background: transparent;  
 }
 
-/* Menus déroulants */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; /* Place le menu juste en dessous du bouton */
-    left: 50%; /* Centre le menu sous le bouton */
-    transform: translateX(-50%);
-    width: auto; /* La largeur s'ajuste automatiquement au contenu */
-    max-width: 350px; /* Optionnel : limite la largeur si nécessaire */
-    background-color: #3A3F5A;
-    list-style: none;
-    border-radius: 5px;
-    margin: 5px 0 0;
-    padding: 10px 20px; /* Ajuster l'espacement entre le texte et les bords */
-    z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.dropdown ul li {
+    list-style-type: none;
+    padding: 5px 0;
 }
 
-/* Alignement des éléments du menu déroulant */
-.dropdown-menu li {
-    display: block; /* Aligne les éléments les uns sous les autres */
-    margin: 5px 0; /* Espacement vertical entre les éléments */
+.button-block {    
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: auto auto;
+    padding: 0px;
 }
 
-.dropdown-menu li:hover {
-    background-color: #50567A;
+.button-block li {
+    flex: 1;
+    max-width: var(--btn-width); /* ou 33.33% si tu veux 3 boutons égaux */
+    position: relative; /* <<< Ajout: Contexte pour le positionnement absolu du menu enfant */
+    list-style-type: none; /* Assure que les puces ne s'affichent pas */
 }
 
-header.expanded {
-    transition: height 0.3s ease;
-}
-
-/* Style des liens dans le menu déroulant */
-.dropdown-menu li a {
-    display: block; /* Chaque lien prend une ligne entière */
-    background-color: #3A3F5A;
-    color: white;
-    text-decoration: none;
-    padding: 10px 10px;
-    font-size: 1rem;
-    text-align: left; /* Aligne le texte à gauche */
-    border-radius: 5px;
-    transition: background-color 0.3s ease, font-size 0.3s ease;
-    line-height: 1.5; /* Espacement vertical entre les lignes de texte */
-    white-space: nowrap;
-    border-radius: 5px;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #50567A; /* Si vous voulez conserver le changement de fond */
-    font-size: 1rem; /* Empêche le texte de s'agrandir */
-    color: white;
-}
-
-/* Menu déroulant visible */
-.dropdown.active .dropdown-menu {
-    display: block; /* Affiche le menu déroulant */
-    border-radius: 5px;
-}
-
-.dropdown-button a,
-.dropdown-menu a {
-    color: white;
-    text-decoration: none;
-}
-
-.burger-menu {
-    display: none;
-    font-size: 8vw;
-    background: none;
+.btn-top{
+    padding: 10px;
+    background-color: transparent;
+    width: var(--btn-width);
     border: none;
-    color: white;
+    outline: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    border-radius: 15px;
-    position: absolute; 
-    right: 20px;
-    z-index: 1000;
+    color: #f1f1f1;
+    transition: color 0.3s ease; /* Ajoute une transition douce pour la couleur */
 }
 
+.btn-top:hover {
+    color: var(--accent-color); /* Change la couleur au survol (bleu défini dans :root) */
+    /* Ou tu peux choisir une autre couleur, par exemple : */
+    /* color: #ffffff; */ /* Blanc pur */
+    /* color: #cccccc; */ /* Gris clair */
+}
 
-/* Styles spécifiques pour les petits écrans (mobiles) */
+.block-links {
+    overflow: hidden;
+    transition: height 0.4s ease-in-out;
+    height: 0;
+    background-color: var(--primary-color); /* <<< Ajout/Modification: Fond pour la visibilité */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionnel: Ajouter une ombre */
+}
+
+.block-links ul {
+    padding: 10px;
+}
+
+.block-links li {
+    list-style-type: none;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.block-links li a {
+    font-size: 18px;
+    color: var(--text-color-dark);
+    margin-left: 0;
+    display: block;
+    text-decoration: none; /* Enlève le soulignement par défaut */
+    white-space: normal; /* <<< Ajoute cette ligne pour autoriser le retour à la ligne */
+    word-wrap: break-word; /* <<< Ajout: Force la coupure des mots très longs si nécessaire */
+    text-align: center; /* Assure le centrage même sur plusieurs lignes */
+    transition: color 0.2s ease, color 0.2s ease; /* Transition pour le survol */
+}
+
+.block-links li a:hover {
+    color: var(--accent-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 @media screen and (max-width: 768px) {
-    /* Réduire la hauteur de l'image de fond sur mobile */
-    .main-banner {
-        height: 50px; /* Réduire la hauteur de l'image sur mobile */
-        padding: 20px; /* Ajuster le padding */
+    .burger-button {
+        margin-left: auto;
     }
 
-    /* Réduire la taille du logo */
-    .banner-logo {
-        max-height: 40px; /* Taille plus petite pour le logo */
+    .button-block {
+        flex-direction: column; /* Les boutons seront alignés en colonne */
+        align-items: center; /* Centrer les boutons horizontalement */
+        padding-left: 0;
     }
 
-    /* Réduire la taille du titre */
-    .title {
-        font-size: 5vw; /* Taille dynamique en fonction de la largeur de l'écran */
-        margin-left: 10px; /* Ajuster l'espace entre le titre et le logo */
+    .block-links{
+        display: flex;
+        padding: 0px;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
     }
 
-    /* Ajuster les boutons */
-    .dropdown-button {
-        padding: 8px 25px; /* Réduire le padding des boutons */
-        font-size: 0.9rem; /* Ajuster la taille de la police */
-    }
-
-    /* Ajuster les éléments du sous-bandeau */
-    .sub-banner {
-        display: none; /* Cacher la bannière par défaut */
-        justify-content: flex-start;
-        flex-direction: column; /* Aligne les boutons verticalement */
-        place-items: center; /* Centre horizontalement les boutons */
-        position: absolute; /* Positionne la bannière en haut de l'écran */
-        top: 90px; /* Ajuste la hauteur par rapport à la bannière principale */
-        left: 0;
-        width: 100%; /* Prend toute la largeur de l'écran */
-        height: calc(100vh - 70px);
-        background-color: #202442; /* Couleur de fond */
-        z-index: 999; /* Par-dessus les autres éléments */
-        padding: 10px 0;
-        overflow-y: auto;
-        transition: max-height 0.3s ease; /* Animation du déroulement */
-        overflow: hidden;
-        max-height: 0; /* Hauteur initiale (caché) */
-        padding-top: 10vh;
+    .block-links ul {
+        padding: 0; /* Assurez-vous qu’il n’y a pas de padding sur le `ul` */
+        margin: 0; /* Évitez les marges qui pourraient décaler le contenu */
+        width: 100%; /* Prendre toute la largeur possible */
     }
     
-    .sub-banner.active {
-        display: flex; /* Affiche la bannière */
-        max-height: calc(100vh - 40px); /* Hauteur maximale lorsqu'elle est ouverte */
-        transition: max-height 0.3s ease;
+    .block-links li,
+    .block-links li a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .block-links li a {
+        display: block;
+        margin: 0 auto;
+        color: var(--text-color-dark);
+    }
+        
+    .banner-top img {
+        border-radius: 50px;
+        margin-left: 1rem;
+        height: 50%; 
+        max-height: 50px; 
+        object-fit: contain; 
+        cursor: pointer;
+        margin-top: 0px;
     }
 
-    .main-menu.active {
-        background-color: black;
-        height: 100%;
+    .banner-top .block-titles {
+        margin-left: 10px;
     }
 
-    .burger-menu {
-        display: flex;
+    .banner-top .block-titles .title {
+        font-size: 1.3em;
     }
+
+    .banner-top .block-titles .sous-title {
+        font-size: 0.8em;
+    }
+    
 }
